@@ -38,24 +38,177 @@ body {
     font-family: "Hanken Grotesk", sans-serif;
     font-size: 13px;
     line-height: 1.5;
-    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--light-slate-blue-bg), var(--light-royal-blue-bg));
+    padding: 30px;
+    border-radius: 0 0 30px 30px;
+    color: var(--light-lavender);
+    height: 350px; /* Adjust as needed */
+}
+
+.result h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.overall-score {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 24px;
+    background: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.overall-score .total-score {
+    color: var(--white);
+    font-size: 60px;
+    font-weight: var(--font-weight-extra-bold);
+}
+
+.overall-score p {
+    font-size: 16px;
+}
+
+.rating {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.rating h2 {
+    color: var(--white);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.rating p {
+    font-size: 16px;
+}
+
+.summary {
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 0 0 30px 30px;
+}
+
+.summary h2 {
+    text-align: left;
+    color: var(--dark-gray-blue);
+    margin-bottom: 20px;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card img {
+    margin-right: 10px;
+}
+
+.card .title {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card .score {
+    color: var(--dark-gray-blue);
+    font-weight: var(--font-weight-bold);
+}
+
+.card .score-value {
+    color: var(--dark-gray-blue);
+}
+
+.max-score {
+    opacity: 50%;
+    font-weight: var(--font-weight-extra-bold);
+}
+
+.card:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.card:nth-child(1) .title {
+    color: var(--light-red);
+}
+
+.card:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.card:nth-child(2) .title {
+    color: var(--orange-yellow);
+}
+
+.card:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.card:nth-child(3) .title {
+    color: var(--green-teal);
+}
+
+.card:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.card:nth-child(4) .title {
+    color: var(--cobalt-blue);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, var(--light-slate-blue-bg), var(--light-royal-blue-bg));
 }
 
 /* Attribution */
 .attribution {
     font-size: 11px;
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff; 
+    /* background-color: #ffffff;  */
     padding: 10px 0;
 }
 .attribution a {
